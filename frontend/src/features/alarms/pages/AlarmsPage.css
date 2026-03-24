@@ -1,0 +1,193 @@
+.alarms-page {
+  display: grid;
+  gap: 1.5rem;
+}
+
+.alarms-page__header,
+.alarm-editor,
+.alarm-preview-panel,
+.alarm-list-panel,
+.alarm-card {
+  padding: 1.75rem;
+  border-radius: 2rem;
+  background: rgba(24, 18, 16, 0.95);
+}
+
+.alarms-page__eyebrow,
+.alarm-editor__eyebrow,
+.alarm-preview-panel__eyebrow,
+.alarm-list-panel__eyebrow,
+.alarm-card__label {
+  margin: 0 0 0.5rem;
+  color: var(--color-primary);
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+}
+
+.alarms-page__header h2,
+.alarm-editor h3,
+.alarm-preview-panel h3,
+.alarm-list-panel h3,
+.alarm-card h4 {
+  margin-top: 0;
+  margin-bottom: 0.75rem;
+  font-family: var(--font-display);
+}
+
+.alarms-page__header p:last-child,
+.alarm-editor__status,
+.alarm-preview-panel p,
+.alarm-card p:last-child {
+  color: var(--color-on-surface-variant);
+}
+
+.alarms-page__grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1.3fr) minmax(18rem, 0.9fr);
+  gap: 1rem;
+}
+
+.alarm-editor {
+  display: grid;
+  gap: 1rem;
+}
+
+.alarm-editor__header,
+.alarm-list-panel__header {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  align-items: flex-start;
+}
+
+.alarm-editor__form-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1rem;
+}
+
+.alarm-field {
+  display: grid;
+  gap: 0.5rem;
+}
+
+.alarm-field span,
+.alarm-toggle span {
+  font-size: 0.9rem;
+  font-weight: 600;
+}
+
+.alarm-field input,
+.alarm-field select {
+  min-height: 3rem;
+  padding: 0.9rem 1rem;
+  border: 0;
+  border-radius: 1.25rem;
+  background: rgba(45, 36, 33, 0.95);
+  color: var(--color-on-surface);
+}
+
+.weekday-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+}
+
+.weekday-pill,
+.alarm-card__actions button,
+.alarm-editor__secondary-button,
+.alarm-editor__ghost-button {
+  min-height: 2.75rem;
+  padding: 0.7rem 1rem;
+  border: 0;
+  border-radius: 999px;
+  background: rgba(45, 36, 33, 0.95);
+  color: var(--color-on-surface);
+  cursor: pointer;
+}
+
+.weekday-pill--active,
+.alarm-editor__primary-button {
+  background: linear-gradient(135deg, var(--color-primary), var(--color-secondary));
+  color: var(--color-on-primary);
+  font-weight: 700;
+}
+
+.alarm-editor__primary-button {
+  min-height: 3rem;
+  padding: 0.8rem 1.2rem;
+  border: 0;
+  border-radius: 999px;
+  cursor: pointer;
+}
+
+.alarm-toggle {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.alarm-toggle input {
+  width: 1.15rem;
+  height: 1.15rem;
+}
+
+.alarm-editor__actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+}
+
+.alarm-preview-panel {
+  display: grid;
+  gap: 1rem;
+}
+
+.alarm-preview-panel__timeline {
+  display: grid;
+  gap: 0.75rem;
+}
+
+.alarm-preview-panel__step {
+  padding: 1rem;
+  border-radius: 1.25rem;
+  background: rgba(45, 36, 33, 0.85);
+  color: var(--color-on-surface);
+}
+
+.alarm-list {
+  display: grid;
+  gap: 1rem;
+}
+
+.alarm-card {
+  display: grid;
+  gap: 1rem;
+}
+
+.alarm-card__details,
+.alarm-card__actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+}
+
+.alarm-card__details span {
+  padding: 0.65rem 1rem;
+  border-radius: 999px;
+  background: rgba(45, 36, 33, 0.95);
+}
+
+@media (max-width: 920px) {
+  .alarms-page__grid,
+  .alarm-editor__form-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .alarm-editor__header,
+  .alarm-list-panel__header {
+    flex-direction: column;
+  }
+}

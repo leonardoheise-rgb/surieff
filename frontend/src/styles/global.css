@@ -1,0 +1,51 @@
+:root {
+  font-family: var(--font-body);
+  color-scheme: dark;
+  background:
+    radial-gradient(circle at top, rgba(255, 120, 81, 0.22), transparent 32%),
+    linear-gradient(180deg, #130d0b 0%, #1b1310 45%, #130d0b 100%);
+  color: #f0e3df;
+  --font-display: 'Manrope', sans-serif;
+  --font-body: 'Plus Jakarta Sans', sans-serif;
+  --color-surface: #130d0b;
+  --color-surface-container: #1f1816;
+  --color-surface-highest: #2d2421;
+  --color-primary: #ff8f6f;
+  --color-secondary: #feb64c;
+  --color-on-primary: #5c1400;
+  --color-on-surface: #f0e3df;
+  --color-on-surface-variant: #b4a9a5;
+  --color-error: #ff716c;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  min-height: 100%;
+}
+
+body {
+  min-height: 100vh;
+  margin: 0;
+  background:
+    radial-gradient(circle at top, rgba(255, 120, 81, 0.22), transparent 32%),
+    linear-gradient(180deg, #130d0b 0%, #1b1310 45%, #130d0b 100%);
+}
+
+body,
+button,
+input,
+textarea,
+select {
+  font-family: var(--font-body);
+}
+
+#root {
+  min-height: 100vh;
+}
+
+a {
+  color: inherit;
+}

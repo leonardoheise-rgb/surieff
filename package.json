@@ -1,0 +1,16 @@
+{
+  "name": "solaris",
+  "version": "0.1.0",
+  "private": true,
+  "workspaces": [
+    "frontend"
+  ],
+  "scripts": {
+    "dev": "npm --prefix frontend run dev",
+    "build": "npm --prefix frontend run build",
+    "test": "npm --prefix frontend run test -- --run",
+    "test:watch": "npm --prefix frontend run test",
+    "lint": "npm --prefix frontend run lint"
+  }
+}
+
