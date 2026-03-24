@@ -1,4 +1,5 @@
 export type DeviceConnectionState = 'online' | 'degraded' | 'offline';
+export type DeviceCommand = 'power' | 'brightness' | 'scene' | 'sunrise-test' | 'refresh';
 
 export interface DeviceRegistrationDraft {
   name: string;
@@ -28,8 +29,11 @@ export interface DeviceSnapshot {
   deviceHost: string;
   connectionState: DeviceConnectionState;
   firmwareVersion: string;
+  isPoweredOn: boolean;
   brightnessPercent: number;
   activeSceneName: string;
+  availableSceneNames: string[];
+  lastSyncedAt: string;
   nextAlarm: AlarmPreview;
 }
 
@@ -64,4 +68,6 @@ export interface DeviceState {
   summary: DeviceSummary;
   isBusy: boolean;
   onboardingMessage: string | null;
+  inFlightCommand: DeviceCommand | null;
+  lastCommandMessage: string | null;
 }

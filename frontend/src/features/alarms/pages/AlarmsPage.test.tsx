@@ -22,7 +22,7 @@ describe('AlarmsPage', () => {
     });
     fireEvent.click(screen.getByRole('button', { name: 'Create alarm' }));
 
-    expect(await screen.findByRole('status')).toHaveTextContent('Alarm created.');
+    expect(screen.getByRole('status')).toHaveTextContent('Alarm created.');
     expect(screen.getAllByText('Gym Sunrise')).toHaveLength(2);
   });
 

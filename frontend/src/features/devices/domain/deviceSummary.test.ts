@@ -7,8 +7,11 @@ const baseSnapshot: DeviceSnapshot = {
   deviceHost: '192.168.1.22',
   connectionState: 'online',
   firmwareVersion: 'WLED 0.15.0',
+  isPoweredOn: true,
   brightnessPercent: 68,
   activeSceneName: 'Golden Wake',
+  availableSceneNames: ['Golden Wake', 'Soft Horizon'],
+  lastSyncedAt: '2026-03-24T06:15:00.000Z',
   nextAlarm: {
     id: 'weekday',
     label: 'Weekday',

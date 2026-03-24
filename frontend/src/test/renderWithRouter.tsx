@@ -25,6 +25,10 @@ type TestDeviceContextValue = DeviceState & {
   registerDevice: (draft: DeviceRegistrationDraft) => Promise<DeviceRegistrationResult>;
   selectDevice: (deviceId: string) => Promise<void>;
   refreshActiveDevice: () => Promise<void>;
+  setPower: (isPoweredOn: boolean) => Promise<void>;
+  setBrightness: (brightnessPercent: number) => Promise<void>;
+  setActiveScene: (sceneName: string) => Promise<void>;
+  triggerSunriseTest: () => Promise<void>;
 };
 
 export function createTestDeviceContextValue(
@@ -37,23 +41,35 @@ export function createTestDeviceContextValue(
     summary: buildDeviceSummary(snapshot),
     isBusy: false,
     onboardingMessage: null,
+    inFlightCommand: null,
+    lastCommandMessage: null,
     registerDevice: async (draft: DeviceRegistrationDraft) => {
       void draft;
       return {
-      device: registeredDevice,
-      probe: {
-        isReachable: true,
-        connectionState: 'online' as const,
-        connectionLabel: 'Connected',
-        details: 'The device responded and looks compatible with the current WLED target.',
-      },
-      message: 'The device responded and looks compatible with the current WLED target.',
+        device: registeredDevice,
+        probe: {
+          isReachable: true,
+          connectionState: 'online' as const,
+          connectionLabel: 'Connected',
+          details: 'The device responded and looks compatible with the current WLED target.',
+        },
+        message: 'The device responded and looks compatible with the current WLED target.',
       };
     },
     selectDevice: async (deviceId: string) => {
       void deviceId;
     },
     refreshActiveDevice: async () => {},
+    setPower: async (isPoweredOn: boolean) => {
+      void isPoweredOn;
+    },
+    setBrightness: async (brightnessPercent: number) => {
+      void brightnessPercent;
+    },
+    setActiveScene: async (sceneName: string) => {
+      void sceneName;
+    },
+    triggerSunriseTest: async () => {},
     ...overrides,
   };
 }
